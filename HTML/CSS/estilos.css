@@ -26,28 +26,28 @@ h1, h2, h3, h4, .navbar-brand {
 
 /* ---------- COLOR DE MARCA (para no depender solo del azul de Bootstrap) ---------- */
 .navbar-brand {
-  color: ;
+  color: #a05a3d;
 }
 
 .btn-tierra {
-  background-color: var(--color-tierra);
-  border-color: var(--color-tierra);
+  background-color: #a05a3d;   
+  border-color: #a05a3d; 
   color: #fff;
 }
 
 .btn-tierra:hover {
   background-color: #8B4513;
-  border-color: var(--color-tierra-oscuro);
+  border-color: #7d4530;
   color: #fff;
 }
 
 .btn-outline-tierra {
-  border-color: var(--color-tierra);
-  color: var(--color-tierra);
+  border-color: #7d4530;;
+  color: #7d4530;;
 }
 
 .btn-outline-tierra:hover {
-  background-color: var(--color-tierra);
+  background-color: #7d4530;;
   color: #fff;
 }
 
@@ -58,7 +58,7 @@ h1, h2, h3, h4, .navbar-brand {
 /* ---------- HERO ---------- */
 .hero,
 .hero-interior {
-  background-color: var(--color-cielo);
+  background-color:  #1f3a5f;
   color: #fff;
 }
 
@@ -67,7 +67,7 @@ h1, h2, h3, h4, .navbar-brand {
   width: 65px;
   height: 65px;
   border-radius: 50%;
-  background-color: var(--color-tierra);
+  background-color:#f1e9dd ;
   color: #fff;
   display: flex;
   align-items: center;
@@ -110,7 +110,7 @@ h1, h2, h3, h4, .navbar-brand {
 
 /* ---------- FOOTER ---------- */
 footer {
-  background-color: var(--color-cielo);
+  background-color:  #1f3a5f;
   color: #d9e2ec;
 }
 
