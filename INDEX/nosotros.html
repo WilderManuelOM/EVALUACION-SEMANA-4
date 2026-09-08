@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nosotros - Kuntur Perú Tours</title>
+
+    <!-- Fuentes Google -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Manrope:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS propio (Sin Bootstrap) -->
+    <link rel="stylesheet" href="../ESTILOS/estilo 1.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar-custom">
+        <a href="inicio.html" class="logo">
+          <img src="/assets/IMAGEN DEL LOGO.png" alt="Kuntur Perú Tours" />
+          Kuntur <em>Perú Tours</em>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="inicio.html">INICIO</a></li>
+          <li><a href="destinos.html">DESTINOS</a></li>
+          <li><a href="nosotros.html">NOSOTROS</a></li>
+          <li><a href="tours.html">TOURS</a></li>
+          <li><a href="contacto.html">CONTACTO</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section
+        class="hero"
+        style="
+          background-image:
+            linear-gradient(rgba(36, 31, 28, 0.7), rgba(36, 31, 28, 0.7)),
+            url(&quot;https://picsum.photos/id/1025/1600/900&quot;);
+        "
+      >
+        <div class="hero-text">
+          <p class="hero-kicker">Nuestra Historia</p>
+          <h1>Pasión por nuestra tierra y nuestra gente</h1>
+          <p class="hero-desc">
+            Somos una agencia local nacida en el corazón de los Andes, dedicada
+            a mostrar el Perú auténtico.
+          </p>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 1: HISTORIA -->
+      <section class="section">
+        <h2 class="section-title">¿Quiénes somos?</h2>
+        <p
+          class="section-subtitle"
+          style="max-width: 700px; margin: 0 auto 30px auto"
+        >
+          Kuntur Perú Tours nació con el propósito de ofrecer viajes
+          responsables y con impacto positivo. Creemos en el turismo que respeta
+          las tradiciones locales, preserva el medio ambiente y crea lazos
+          verdaderos entre los viajeros y las comunidades que nos reciben.
+        </p>
+      </section>
+
+      <!-- SECCIÓN 2: NUESTROS VALORES (3 COLUMNAS REUTILIZANDO TU CSS) -->
+      <section class="section section-alt">
+        <h2 class="section-title">Nuestros Pilares</h2>
+
+        <div class="features">
+          <article class="feature-card">
+            <span>🏔️</span>
+            <h3>Identidad Andina</h3>
+            <p>
+              Promovemos y valoramos nuestras raíces, compartiendo la historia
+              viva de cada destino.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <span>🤝</span>
+            <h3>Comercio Justo</h3>
+            <p>
+              Trabajamos directamente con guías, arrieros y familias locales,
+              garantizando un pago justo.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <span>🌱</span>
+            <h3>Sostenibilidad</h3>
+            <p>
+              Minimizamos la huella ecológica en cada trekking y ruta
+              comunitaria que realizamos.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 3: NUESTRO EQUIPO -->
+      <section class="section">
+        <h2 class="section-title">Guías y Guías Locales</h2>
+        <p class="section-subtitle">
+          Las personas que harán de tu viaje una experiencia inolvidable
+        </p>
+
+        <div class="tours-grid">
+          <article class="tour-card" style="text-align: center; padding: 20px">
+            <img
+              src="https://picsum.photos/id/64/400/400"
+              alt="Guía Local Cusco"
+              style="
+                border-radius: 50%;
+                width: 140px;
+                height: 140px;
+                margin: 0 auto 15px auto;
+                object-fit: cover;
+              "
+            />
+            <div class="tour-body">
+              <h3>Mateo Quispe</h3>
+              <p class="tour-meta">Guía Oficial de Montaña - Cusco</p>
+              <p>
+                Especialista en el Camino Inca y cultura Quechua con más de 10
+                años de experiencia.
+              </p>
+            </div>
+          </article>
+
+          <article class="tour-card" style="text-align: center; padding: 20px">
+            <img
+              src="https://picsum.photos/id/65/400/400"
+              alt="Coordinadora de campo"
+              style="
+                border-radius: 50%;
+                width: 140px;
+                height: 140px;
+                margin: 0 auto 15px auto;
+                object-fit: cover;
+              "
+            />
+            <div class="tour-body">
+              <h3>Elena Mamani</h3>
+              <p class="tour-meta">Coordinadora de Turismo Vivencial - Puno</p>
+              <p>
+                Encargada de las experiencias culturales con las comunidades del
+                Lago Titicaca.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <aside class="sidebar" id="contacto">
+      <div class="sidebar-box">
+        <h3>¿Quieres viajar con nosotros?</h3>
+        <p>
+          Escríbenos directamente para responder tus consultas de forma
+          personalizada.
+        </p>
+        <a
+          href="https://wa.me/51900000000"
+          class="btn-whatsapp"
+          target="_blank"
+          rel="noopener"
+          >💬 Hablar con el equipo</a
+        >
+      </div>
+    </aside>
+
+    <footer class="site-footer">
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Kuntur Perú Tours</h4>
+          <p>Turismo vivencial y responsable en Perú.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Enlaces</h4>
+          <ul>
+            <li><a href="inicio.html">Inicio</a></li>
+            <li><a href="destinos.html">Destinos</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <p>Calle Saphi 245, Cusco<br />reservas@kunturperutours.pe</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="anio"></span> Kuntur Perú Tours. Proyecto académico.</p>
+      </div>
+    </footer>
+    <script src="../JS/script.js"></script>
+  </body>
+</html>

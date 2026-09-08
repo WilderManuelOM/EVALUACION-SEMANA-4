@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto - Kuntur Perú Tours</title>
+
+    <!-- Fuentes Google -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Manrope:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../ESTILOS/estilo 1.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar-custom">
+        <a href="inicio.html" class="logo">
+          <img src="/assets/IMAGEN DEL LOGO.png" alt="Kuntur Perú Tours" />
+          Kuntur <em>Perú Tours</em>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="inicio.html">INICIO</a></li>
+          <li><a href="destinos.html">DESTINOS</a></li>
+          <li><a href="nosotros.html">NOSOTROS</a></li>
+          <li><a href="tours.html">TOURS</a></li>
+          <li><a href="contacto.html">CONTACTO</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- PORTADA DE LA PÁGINA -->
+      <section
+        class="hero"
+        style="
+          background-image:
+            linear-gradient(rgba(36, 31, 28, 0.7), rgba(36, 31, 28, 0.7)),
+            url(&quot;https://picsum.photos/id/1015/1600/900&quot;);
+        "
+      >
+        <div class="hero-text">
+          <p class="hero-kicker">Estamos para ayudarte</p>
+          <h1>Ponte en Contacto con Nosotros</h1>
+          <p class="hero-desc">
+            ¿Tienes preguntas sobre un tour o quieres un itinerario a medida?
+            Escríbenos y un especialista te responderá a la brevedad.
+          </p>
+        </div>
+      </section>
+
+      <!-- SECCIÓN DE CONTACTO: FORMULARIO E INFORMACIÓN -->
+      <section class="section">
+        <div
+          class="tours-grid"
+          style="
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            align-items: start;
+          "
+        >
+          <!-- BLOQUE 1: FORMULARIO -->
+          <article class="tour-card" style="padding: 25px">
+            <h2 style="margin-bottom: 15px; font-size: 1.5em; color: #241f1c">
+              Envíanos un mensaje
+            </h2>
+
+            <form
+              action="#"
+              method="POST"
+              style="display: flex; flex-direction: column; gap: 15px"
+            >
+              <div>
+                <label
+                  for="nombre"
+                  style="display: block; margin-bottom: 5px; font-weight: bold"
+                  >Nombre Completo:</label
+                >
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  placeholder="Ej. Juan Pérez"
+                  required
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 1px solid #ccc;
+                    border-radius: 6px;
+                  "
+                />
+              </div>
+
+              <div>
+                <label
+                  for="correo"
+                  style="display: block; margin-bottom: 5px; font-weight: bold"
+                  >Correo Electrónico:</label
+                >
+                <input
+                  type="email"
+                  id="correo"
+                  name="correo"
+                  placeholder="ejemplo@correo.com"
+                  required
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 1px solid #ccc;
+                    border-radius: 6px;
+                  "
+                />
+              </div>
+
+              <div>
+                <label
+                  for="telefono"
+                  style="display: block; margin-bottom: 5px; font-weight: bold"
+                  >Teléfono / WhatsApp:</label
+                >
+                <input
+                  type="tel"
+                  id="telefono"
+                  name="telefono"
+                  placeholder="+51 900 000 000"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 1px solid #ccc;
+                    border-radius: 6px;
+                  "
+                />
+              </div>
+
+              <div>
+                <label
+                  for="destino"
+                  style="display: block; margin-bottom: 5px; font-weight: bold"
+                  >Destino de Interés:</label
+                >
+                <select
+                  id="destino"
+                  name="destino"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 1px solid #ccc;
+                    border-radius: 6px;
+                  "
+                >
+                  <option value="cusco">Cusco & Machu Picchu</option>
+                  <option value="titicaca">Puno & Lago Titicaca</option>
+                  <option value="selva">Amazonía (Madre de Dios)</option>
+                  <option value="otro">Otro / Personalizado</option>
+                </select>
+              </div>
+
+              <div>
+                <label
+                  for="mensaje"
+                  style="display: block; margin-bottom: 5px; font-weight: bold"
+                  >Mensaje:</label
+                >
+                <textarea
+                  id="mensaje"
+                  name="mensaje"
+                  rows="4"
+                  placeholder="Cuéntanos tus fechas de viaje o requerimientos especiales..."
+                  required
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 1px solid #ccc;
+                    border-radius: 6px;
+                    resize: vertical;
+                  "
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="btn-primary"
+                style="cursor: pointer; border: none; font-size: 1em"
+              >
+                Enviar Mensaje
+              </button>
+            </form>
+          </article>
+
+          <!-- BLOQUE 2: CANALES DE ATENCIÓN DIRECTA -->
+          <div style="display: flex; flex-direction: column; gap: 20px">
+            <article
+              class="feature-card"
+              style="text-align: left; padding: 20px"
+            >
+              <span style="font-size: 2em">📍</span>
+              <h3>Oficina Principal</h3>
+              <p>Calle Saphi 245, Centro Histórico, Cusco - Perú</p>
+            </article>
+
+            <article
+              class="feature-card"
+              style="text-align: left; padding: 20px"
+            >
+              <span style="font-size: 2em">💬</span>
+              <h3>Atención Inmediata</h3>
+              <p>
+                Escríbenos directamente por WhatsApp para atención en tiempo
+                real.
+              </p>
+              <a
+                href="https://wa.me/51900000000"
+                class="btn-whatsapp"
+                target="_blank"
+                rel="noopener"
+                style="display: inline-block; margin-top: 10px"
+                >Chatear por WhatsApp</a
+              >
+            </article>
+
+            <article
+              class="feature-card"
+              style="text-align: left; padding: 20px"
+            >
+              <span style="font-size: 2em">⏰</span>
+              <h3>Horarios de Atención</h3>
+              <p>
+                <strong>Lunes a Viernes:</strong> 8:00 am - 7:00 pm<br /><strong
+                  >Sábados:</strong
+                >
+                9:00 am - 2:00 pm
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <aside class="sidebar">
+      <div class="sidebar-box testimonial">
+        <blockquote>
+          "Respondieron todas mis dudas de inmediato por correo y nos esperaron
+          puntuales en el aeropuerto de Cusco."
+        </blockquote>
+        <cite>— Rodrigo L., Chile</cite>
+      </div>
+    </aside>
+
+    <footer class="site-footer">
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Kuntur Perú Tours</h4>
+          <p>Agencia de viajes y tours guiados por el Perú.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Enlaces</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="destinos.html">Destinos</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="tours.html">Tours</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <p>Calle Saphi 245, Cusco<br />reservas@kunturperutours.pe</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="anio"></span> Kuntur Perú Tours. Proyecto académico.</p>
+      </div>
+    </footer>
+
+    <!-- JS Propio -->
+    <script src="../JS/script.js"></script>
+  </body>
+</html>
