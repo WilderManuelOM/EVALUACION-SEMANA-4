@@ -164,7 +164,7 @@ h4 {
 .hero {
   background:
     linear-gradient(rgba(36, 31, 28, 0.55), rgba(36, 31, 28, 0.55)),
-    url("https://picsum.photos/id/1018/1600/900") center/cover no-repeat;
+    url("https://i.pinimg.com/736x/97/ca/73/97ca73cf6315d3bd6eadf64b7c6617ce.jpg") center/cover no-repeat;
 
   color: var(--color-white);
   padding: 120px 24px;
@@ -440,4 +440,15 @@ h4 {
     width: 40px;
     height: 40px;
   }
+}
+
+
+.card-icon {
+  width: 100%;           /* Ocupa todo el ancho disponible de la tarjeta */
+  max-width: 260px;      /* Ancho máximo uniforme para que no se desarme */
+  height: 180px;         /* Altura fija para que todas tengan la misma medida */
+  object-fit: cover;     /* Rena el contenedor recortando los sobrantes sin deformar la imagen */
+  border-radius: 8px;    /* Bordes ligeramente redondeados (opcional) */
+  margin: 15px auto;     /* Centrado con espacio arriba y abajo */
+  display: block;
 }
