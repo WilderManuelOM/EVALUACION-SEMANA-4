@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
 
+    <!-- CSS propio -->
     <link rel="stylesheet" href="../ESTILOS/estilo 1.css" />
   </head>
   <body>
@@ -35,14 +36,7 @@
 
     <main>
       <!-- PORTADA DE LA PÁGINA -->
-      <section
-        class="hero"
-        style="
-          background-image:
-            linear-gradient(rgba(36, 31, 28, 0.6), rgba(36, 31, 28, 0.6)),
-            url(&quot;https://picsum.photos/id/1018/1600/900&quot;);
-        "
-      >
+      <section class="hero hero-tours">
         <div class="hero-text">
           <p class="hero-kicker">Catálogo de Paquetes</p>
           <h1>Encuentra tu Próxima Aventura</h1>
@@ -64,8 +58,9 @@
           <!-- TOUR 1 -->
           <article class="tour-card">
             <img
-              src="https://picsum.photos/id/1016/500/320"
+              src="https://i.pinimg.com/1200x/81/a4/82/81a4827e66d2dda0b64dac52ff2fb021.jpg"
               alt="Cusco Clásico"
+              class="card-icon"
             />
             <div class="tour-body">
               <h3>Clásico Cusco & Machu Picchu</h3>
@@ -74,14 +69,7 @@
                 Recorrido completo por la ciudad imperial, Ollantaytambo, Pisac
                 y el santuario histórico de Machu Picchu por tren.
               </p>
-              <ul
-                style="
-                  padding-left: 18px;
-                  margin-bottom: 15px;
-                  font-size: 0.9em;
-                  color: #555;
-                "
-              >
+              <ul class="tour-features-list">
                 <li>Incluye boletos de tren e ingresos.</li>
                 <li>Hotel con desayuno incluido.</li>
               </ul>
@@ -100,8 +88,9 @@
           <!-- TOUR 2 -->
           <article class="tour-card">
             <img
-              src="https://picsum.photos/id/1036/500/320"
+              src="https://i.pinimg.com/1200x/93/16/d8/9316d8c92475fcaa60ae8678eca3688e.jpg"
               alt="Lago Titicaca"
+              class="card-icon"
             />
             <div class="tour-body">
               <h3>Ruta Lago Titicaca & Vivencial</h3>
@@ -110,14 +99,7 @@
                 Navega en lancha por el lago más alto del mundo. Pernocta con
                 familias locales en la isla de Amantaní y visita Uros.
               </p>
-              <ul
-                style="
-                  padding-left: 18px;
-                  margin-bottom: 15px;
-                  font-size: 0.9em;
-                  color: #555;
-                "
-              >
+              <ul class="tour-features-list">
                 <li>Alimentación completa en la isla.</li>
                 <li>Transporte marítimo y terrestre.</li>
               </ul>
@@ -135,7 +117,11 @@
 
           <!-- TOUR 3 -->
           <article class="tour-card">
-            <img src="https://picsum.photos/id/1044/500/320" alt="Amazonía" />
+            <img
+              src="https://i.pinimg.com/1200x/09/99/4f/09994f753068e2782664875a112a6c2d.jpg"
+              alt="Amazonía"
+              class="card-icon"
+            />
             <div class="tour-body">
               <h3>Expedición Tambopata Selva</h3>
               <p class="tour-meta">
@@ -145,14 +131,7 @@
                 Adéntrate en el corazón de la Reserva Nacional Tambopata.
                 Avistamiento de fauna nocturna, caminatas y kayak.
               </p>
-              <ul
-                style="
-                  padding-left: 18px;
-                  margin-bottom: 15px;
-                  font-size: 0.9em;
-                  color: #555;
-                "
-              >
+              <ul class="tour-features-list">
                 <li>Alojamiento en Eco-Lodge.</li>
                 <li>Guía naturalista certificado.</li>
               </ul>
@@ -181,14 +160,7 @@
                 Alternativa inolvidable al Camino Inca. Atraviesa nevados
                 impetuosos hasta descender a la selva alta.
               </p>
-              <ul
-                style="
-                  padding-left: 18px;
-                  margin-bottom: 15px;
-                  font-size: 0.9em;
-                  color: #555;
-                "
-              >
+              <ul class="tour-features-list">
                 <li>Equipo de camping y cocinero.</li>
                 <li>Mulas para transporte de equipaje.</li>
               </ul>
@@ -211,7 +183,11 @@
         <h2 class="section-title">¿Qué incluyen nuestros tours?</h2>
         <div class="features">
           <article class="feature-card">
-            <span>🎟️</span>
+            <img
+              src="https://i.pinimg.com/1200x/13/c1/83/13c18335b4bb7f5e541f5e356fbc5718.jpg"
+              alt="Ingresos garantizados"
+              class="card-icon"
+            />
             <h3>Ingresos Garantizados</h3>
             <p>
               Gestionamos las entradas a Machu Picchu y atractivos con
@@ -220,7 +196,11 @@
           </article>
 
           <article class="feature-card">
-            <span>🚍</span>
+            <img
+              src="https://i.pinimg.com/736x/99/d3/26/99d326ecce948ce6c5f347a352c435a4.jpg"
+              alt="Transporte acreditado"
+              class="card-icon"
+            />
             <h3>Transporte Acreditado</h3>
             <p>
               Vehículos turísticos con SOAT vigente y conductores profesionales.
@@ -228,7 +208,11 @@
           </article>
 
           <article class="feature-card">
-            <span>🛡️</span>
+            <img
+              src="https://i.pinimg.com/1200x/09/72/13/09721329b741a366f4a8eaae33d89bda.jpg"
+              alt="Seguridad y asistencia"
+              class="card-icon"
+            />
             <h3>Seguridad y Asistencia</h3>
             <p>Monitoreo y comunicación constante durante todo tu recorrido.</p>
           </article>
@@ -262,7 +246,7 @@
         <div class="footer-col">
           <h4>Enlaces</h4>
           <ul>
-            <li><a href="index.html">Inicio</a></li>
+            <li><a href="inicio.html">Inicio</a></li>
             <li><a href="destinos.html">Destinos</a></li>
             <li><a href="nosotros.html">Nosotros</a></li>
             <li><a href="tours.html">Tours</a></li>
