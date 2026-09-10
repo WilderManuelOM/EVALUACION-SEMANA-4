@@ -93,6 +93,7 @@ h4 {
 .navbar-custom {
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -451,4 +452,127 @@ h4 {
   border-radius: 8px;    /* Bordes ligeramente redondeados (opcional) */
   margin: 15px auto;     /* Centrado con espacio arriba y abajo */
   display: block;
+}
+
+/* =========================================================
+   Responsivo Adaptable (Móvil, Tablet, Escritorio)
+   ========================================================= */
+
+/* --- 1. MÓVIL (Pantallas hasta 767px) --- */
+@media (max-width: 767px) {
+  .site-header {
+    position: relative;
+  }
+
+  /* Muestra el botón hamburguesa */
+  .nav-toggle {
+    display: flex;
+  }
+
+  /* Menú desplegable flotante */
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--color-primary);
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    z-index: 1000;
+  }
+
+  /* Clase que activa el JavaScript al hacer clic */
+  .nav-links.open {
+    max-height: 320px;
+    padding: 16px 0;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 10px 0;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 70px 20px;
+  }
+
+  .features,
+  .tours-grid {
+    grid-template-columns: 1fr; /* 1 columna en celular */
+  }
+
+  .carousel-destinos img {
+    height: 250px;
+  }
+}
+
+/* --- 2. TABLET (Pantallas de 768px a 1024px) --- */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--color-primary);
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    z-index: 1000;
+  }
+
+  .nav-links.open {
+    max-height: 320px;
+    padding: 16px 0;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 10px 0;
+  }
+
+  .features,
+  .tours-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablet */
+  }
+
+  .hero {
+    padding: 90px 24px;
+  }
+
+  .carousel-destinos img {
+    height: 350px;
+  }
+}
+
+/* --- 3. ESCRITORIO (Pantallas de 1025px en adelante) --- */
+@media (min-width: 1025px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    position: static;
+    max-height: none;
+    gap: 28px;
+  }
+
+  .features,
+  .tours-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 3 o 4 columnas según espacio */
+  }
+
+  .carousel-destinos img {
+    height: 420px;
+  }
 }

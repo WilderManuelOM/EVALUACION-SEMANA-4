@@ -1,7 +1,30 @@
 
-//Fumulario de contacto 
+// Menú hamburguesa para pantallas móviles y tablet.
+document.addEventListener("DOMContentLoaded", function () {
+  const botonMenu = document.getElementById("navToggle");
+  const enlacesMenu = document.getElementById("navLinks");
+
+  if (!botonMenu || !enlacesMenu) return;
+
+  botonMenu.addEventListener("click", function () {
+    const abierto = enlacesMenu.classList.toggle("open");
+    botonMenu.setAttribute("aria-expanded", String(abierto));
+    botonMenu.setAttribute("aria-label", abierto ? "Cerrar menú" : "Abrir menú");
+  });
+
+  enlacesMenu.querySelectorAll("a").forEach(function (enlace) {
+    enlace.addEventListener("click", function () {
+      enlacesMenu.classList.remove("open");
+      botonMenu.setAttribute("aria-expanded", "false");
+      botonMenu.setAttribute("aria-label", "Abrir menú");
+    });
+  });
+});
+
+// Formulario de contacto.
 const formulario = document.getElementById("formContacto");
 
+if (formulario) {
 formulario.addEventListener("submit", function (evento) {
   evento.preventDefault();
 
@@ -19,6 +42,7 @@ formulario.addEventListener("submit", function (evento) {
 
   formulario.reset();
 });
+}
 
 document.addEventListener("DOMContentLoaded", function() {
   // Verifica si llegamos al formulario de contacto
