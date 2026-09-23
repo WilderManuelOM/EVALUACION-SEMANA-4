@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto - Kuntur Perú Tours</title>
+
+    <!-- Fuentes Google -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Manrope:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./src/css/estilo 1.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar-custom">
+        <a href="index.html" class="logo">
+          <img src="./public/IMAGEN DEL LOGO.png" alt="Kuntur Perú Tours" />
+          Kuntur <em>Perú Tours</em>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">INICIO</a></li>
+          <li><a href="destinos.html">DESTINOS</a></li>
+          <li><a href="nosotros.html">NOSOTROS</a></li>
+          <li><a href="tours.html">TOURS</a></li>
+          <li><a href="contacto.html">CONTACTO</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- PORTADA DE LA PÁGINA -->
+      <section
+        class="hero"
+        style="
+          background-image:
+            linear-gradient(rgba(36, 31, 28, 0.7), rgba(36, 31, 28, 0.7)),
+            url('https://picsum.photos/id/1015/1600/900');
+        "
+      >
+        <div class="hero-text">
+          <p class="hero-kicker">Estamos para ayudarte</p>
+          <h1>Ponte en Contacto con Nosotros</h1>
+          <p class="hero-desc">
+            ¿Tienes preguntas sobre un tour o quieres un itinerario a medida?
+            Escríbenos y un especialista te responderá a la brevedad.
+          </p>
+        </div>
+      </section>
+
+      <!-- SECCIÓN DE CONTACTO Y TABLA CRUD -->
+      <section class="section">
+        <div
+          class="tours-grid"
+          style="
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            align-items: start;
+            gap: 20px;
+          "
+        >
+          <!-- BLOQUE 1: FORMULARIO (CREATE / UPDATE) -->
+          <article class="tour-card" style="padding: 25px">
+            <h2 id="formTitulo" style="margin-bottom: 15px; font-size: 1.5em; color: #241f1c">
+              Envíanos un mensaje
+            </h2>
+
+            <form
+              id="formContacto"
+              style="display: flex; flex-direction: column; gap: 15px"
+            >
+              <!-- Campo oculto para saber si creamos o editamos -->
+              <input type="hidden" id="indexEdit" value="-1" />
+
+              <div>
+                <label for="nombre" style="display: block; margin-bottom: 5px; font-weight: bold">Nombre Completo:</label>
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  placeholder="Ej. Juan Pérez"
+                  required
+                  style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;"
+                />
+              </div>
+
+              <div>
+                <label for="correo" style="display: block; margin-bottom: 5px; font-weight: bold">Correo Electrónico:</label>
+                <input
+                  type="email"
+                  id="correo"
+                  name="correo"
+                  placeholder="ejemplo@correo.com"
+                  required
+                  style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;"
+                />
+              </div>
+
+              <div>
+                <label for="telefono" style="display: block; margin-bottom: 5px; font-weight: bold">Teléfono / WhatsApp:</label>
+                <input
+                  type="tel"
+                  id="telefono"
+                  name="telefono"
+                  placeholder="+51 900 000 000"
+                  style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;"
+                />
+              </div>
+
+              <div>
+                <label for="destino" style="display: block; margin-bottom: 5px; font-weight: bold">Destino de Interés:</label>
+                <select
+                  id="destino"
+                  name="destino"
+                  style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;"
+                >
+                  <option value="cusco">Cusco & Machu Picchu</option>
+                  <option value="titicaca">Puno & Lago Titicaca</option>
+                  <option value="selva">Amazonía (Madre de Dios)</option>
+                  <option value="otro">Otro / Personalizado</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="mensaje" style="display: block; margin-bottom: 5px; font-weight: bold">Mensaje:</label>
+                <textarea
+                  id="mensaje"
+                  name="mensaje"
+                  rows="4"
+                  placeholder="Cuéntanos tus fechas de viaje o requerimientos especiales..."
+                  required
+                  style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; resize: vertical;"
+                ></textarea>
+              </div>
+
+              <div style="display: flex; gap: 10px;">
+                <button
+                  type="submit"
+                  id="btnGuardar"
+                  class="btn-primary"
+                  style="cursor: pointer; border: none; font-size: 1em; flex: 1;"
+                >
+                  Enviar Mensaje
+                </button>
+                <button
+                  type="button"
+                  id="btnCancelar"
+                  style="cursor: pointer; border: 1px solid #ccc; background: #eee; padding: 10px; border-radius: 6px; display: none;"
+                >
+                  Cancelar
+                </button>
+              </div>
+            </form>
+          </article>
+
+          <!-- BLOQUE 2: TABLA DE REGISTROS (READ / DELETE / TRIGGER UPDATE) -->
+          <article class="tour-card" style="padding: 25px; overflow-x: auto;">
+            <h2 style="margin-bottom: 15px; font-size: 1.5em; color: #241f1c">
+              Lista de Solicitudes (CRUD)
+            </h2>
+
+            <table style="width: 100%; border-collapse: collapse; text-align: left;">
+              <thead>
+                <tr style="border-bottom: 2px solid #ccc; background-color: #f5f5f5;">
+                  <th style="padding: 8px;">Nombre</th>
+                  <th style="padding: 8px;">Correo</th>
+                  <th style="padding: 8px;">Destino</th>
+                  <th style="padding: 8px; text-align: center;">Acciones</th>
+                </tr>
+              </thead>
+              <tbody id="tablaContactosBody">
+                <!-- Filas renderizadas dinámicamente -->
+              </tbody>
+            </table>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Kuntur Perú Tours</h4>
+          <p>Agencia de viajes y tours guiados por el Perú.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Enlaces</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="destinos.html">Destinos</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="tours.html">Tours</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <p>Calle Saphi 245, Cusco<br />reservas@kunturperutours.pe</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="anio"></span> Kuntur Perú Tours. Proyecto académico.</p>
+      </div>
+    </footer>
+
+    <!-- JS Propio en Vite -->
+    <script type="module" src="./src/js/java script.js"></script>
+  </body>
+</html>
